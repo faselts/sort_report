@@ -8,9 +8,15 @@
 int main()
 {
 	randomgen();
-	int *num=(int*)malloc(sizeof(int)*1000001);
-	int *nums=(int*)malloc(sizeof(int)*1000001);
+	int *num=(int*)malloc(sizeof(int)*data);
+	int *nums=(int*)malloc(sizeof(int)*data);
+	char *numsw[data];
+	for(int i=0;i<data;i++){
+		numsw[i]=(char*)malloc(sizeof(char)*100);
+	}
 	FILE *fp1=fopen("dataset1.txt","r");
+	FILE *fp2=fopen("dataset2.txt","r");
+
 	for(int i=0;i<data;i++){
 		fscanf(fp1,"%d",&num[i]);
 	}
