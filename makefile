@@ -1,20 +1,11 @@
-objs= random_generation.o sort.o
+objs= random_generation.o sort.o sortw.o main.o
 flags+=-c -Wall -g
 
-all:main.o random_generation.o sort.o sortw.o
-	gcc main.o random_generation.o sort.o sortw.o -o all
+all:$(objs)
+	gcc $^ -o $@
 
-main.o:main.c
-	gcc main.c -c -o main.o
-
-random_generation.o:random_generation.c
-	gcc random_generation.c -c -o random_generation.o
-
-sort.o:sort.c
-	gcc sort.c -c -o sort.o
-
-sortw.o:sortw.c
-	gcc sortw.c -c -o sortw.o
+%.o:%.c
+	gcc $^ $(flags) -o $@
 
 clean:
 	rm *.o all -f

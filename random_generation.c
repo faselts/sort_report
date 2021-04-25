@@ -2,7 +2,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<sys/time.h>
-#define data 1000000
+#define data 500000
 
 void randomgen()
 {
@@ -17,7 +17,7 @@ void randomgen()
 	int flag,cnt=0;
 	char ch[101];
 	FILE *fp2=fopen("dataset2.txt","w");
-	for(int i=0i;i<data;i++){
+	for(int i=0;i<data;i++){
 		for(int j=0;j<100;j++){
 			flag=rand()%2;
 			if(flag){

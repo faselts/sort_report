@@ -1,4 +1,4 @@
-objs= random_generation.o sort.o
+objs= random_generation.o sort.o sortw.o main.o
 flags+=-c -Wall -g
 
 all:$(objs)
