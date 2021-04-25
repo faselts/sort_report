@@ -104,7 +104,7 @@ void mergesort(int arr[], int l, int r)
   }
 
   // Main function to do heap sort
-  void heapSort(int arr[], int n) {
+  void heapsort(int arr[], int n) {
     // Build max heap
     for (int i = n / 2 - 1; i >= 0; i--)
       heapify(arr, n, i);
@@ -118,7 +118,7 @@ void mergesort(int arr[], int l, int r)
     }
   }
 
-void heapsort(int arr[],int n){
+/*void heapsort(int arr[],int n){
 	heapSort(arr,n);
 }
-
+*/
